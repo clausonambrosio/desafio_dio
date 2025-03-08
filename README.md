@@ -4,16 +4,16 @@
 CREATE TABLE ClientePF (
     CPF VARCHAR(11) PRIMARY KEY,
     Nome VARCHAR(255),
-    Endereco VARCHAR(255),
-    Telefone VARCHAR(20)
+    Endereco VARCHAR(300),
+    Telefone VARCHAR(25)
 );
 
 -- Tabela Cliente PJ
 CREATE TABLE ClientePJ (
     CNPJ VARCHAR(14) PRIMARY KEY,
-    RazaoSocial VARCHAR(255),
-    Endereco VARCHAR(255),
-    Telefone VARCHAR(20)
+    RazaoSocial VARCHAR(300),
+    Endereco VARCHAR(300),
+    Telefone VARCHAR(25)
 );
 
 -- Tabela Conta
@@ -31,7 +31,7 @@ CREATE TABLE Conta (
 CREATE TABLE Pagamento (
     IDPagamento INT PRIMARY KEY AUTO_INCREMENT,
     IDConta INT,
-    Descricao VARCHAR(255),
+    Descricao VARCHAR(300),
     FOREIGN KEY (IDConta) REFERENCES Conta(IDConta)
 );
 
@@ -56,7 +56,7 @@ CREATE TABLE Entrega (
 -- Tabela Produto
 CREATE TABLE Produto (
     IdProduto INT PRIMARY KEY AUTO_INCREMENT,
-    Descricao VARCHAR(255),
+    Descricao VARCHAR(300),
     Valor DECIMAL(10, 2)
 );
 
